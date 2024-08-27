@@ -1,0 +1,45 @@
+/* Base styles (desktop and larger screens) */
+.bottom-icons {
+  display: none; /* Hide the icons on larger screens */
+}
+
+/* Mobile view styles */
+@media (max-width: 768px) {
+  .bottom-icons {
+    width: 100%;
+    padding: 0 5px;
+    position: fixed;
+    bottom: 5px;
+    right: 0px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+  }
+
+  .bottom-icons a {
+    height: 3.3rem;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primaryColor);
+    border: 2px solid var(--textColor);
+    border-radius: 50%;
+    text-decoration: none;
+  }
+
+  .bottom-icons a i {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .bottom-icons a:last-child i {
+    font-size: 2.3rem; /* Adjust the size as needed */
+  }
+
+  .bottom-icons a:hover i {
+    transform: scale(1.1);
+  }
+}

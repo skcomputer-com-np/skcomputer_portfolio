@@ -1,0 +1,141 @@
+:root {
+  --primaryColor: #12372a;
+  --secondaryColor: #436850;
+  --hoverColor: #adbc9f;
+  --textColor: #fbfada;
+  --containerPadding_s: 40px 20px;
+  --containerPadding_l: 50px;
+  --wrapperWidth_s: 100%;
+  --wrapperPadding_s: 20px;
+  --gapSmall: 30px;
+  --headingFontSize_l: 50px;
+  --fontWeight_l: 600;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--textColor);
+}
+html,
+body {
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+#header {
+  background-color: var(--primaryColor);
+}
+.logo {
+  display: flex;
+  width: 70px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  padding: 10px;
+}
+.logo img {
+  mix-blend-mode: screen;
+  filter: invert(1) brightness(1.5);
+  /* transform: translateY(7px); */
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  padding: 0 20px;
+}
+.menues {
+  display: flex;
+}
+.menues ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  align-items: center;
+  justify-content: left;
+}
+.menues ul li {
+  justify-content: space-between;
+  margin: 10px 20px;
+}
+.menues ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--textColor);
+  position: relative;
+}
+.menues ul li a::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: var(--textColor);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: ease-in-out 0.5s;
+}
+.menues ul li a:hover::after {
+  width: 100%;
+}
+nav .fas {
+  display: none;
+}
+@media only screen and (max-width: 1366px) {
+  .nav {
+    height: fit-content;
+    /* padding: 10px; */
+    /* transform: translateY(-12px); */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+  }
+
+  .nav {
+    height: fit-content;
+  }
+
+  .nav .fas {
+    display: block;
+    font-size: 25px;
+  }
+  .nav ul {
+    background-color: rgba(18, 55, 42, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    right: -150px;
+    width: 150px;
+    height: fit-content;
+    padding-bottom: 20px;
+    padding-top: 25px;
+    align-content: start;
+    z-index: 2;
+    border: 2px solid var(--textColor);
+    border-right: hidden;
+    border-radius: 10px;
+    transition: right 0.5s;
+  }
+  .nav ul li {
+    width: 100%;
+    display: block;
+    margin: 20px;
+    margin-bottom: 0;
+    height: fit-content;
+  }
+  nav ul .fas {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
+}

@@ -1,0 +1,187 @@
+/* Importing Google font - Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.footer {
+  width: 100%;
+  background: var(--primaryColor);
+  padding-top: 60px;
+  position: static;
+}
+
+.footer .footer-row {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  /* padding: 50px; */
+  margin: auto;
+}
+
+.footer-row .footer-col h4 {
+  color: var(--textColor);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+  padding-left: 0 !important;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  color: var(--textColor);
+}
+
+.footer-col .links li a:hover {
+  color: var(--hoverColor);
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: var(--textColor);
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--hoverColor);
+  caret-color: var(--textColor);
+  color: var(--textColor);
+  padding-left: 10px;
+  margin-bottom: 0;
+}
+
+.footer-col input::placeholder {
+  color: var(--textColor);
+}
+
+.footer-col form button {
+  background: transparent;
+  border: 1px solid var(--textColor);
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: var(--hoverColor);
+  color: var(--primaryColor);
+  font-weight: 600;
+  border: none;
+}
+.dev {
+  width: 100%;
+  text-align: center;
+  padding: 8px 0 8px 0;
+}
+.dev div a {
+  text-decoration: none;
+  color: var(--textColor);
+}
+.dev div a:hover {
+  color: var(--hoverColor);
+}
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  font-size: 2rem;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.footer-col .icons i {
+  color: var(--textColor);
+}
+
+.footer-col .icons i:hover {
+  color: var(--hoverColor);
+  transform: translateY(-4px);
+  scale: 1.01;
+}
+.subscribe-section {
+  width: 50%;
+}
+.footer-border {
+  width: fit-content;
+  border-top: solid 1px var(--textColor);
+  margin: auto;
+  color: var(--textColor);
+  padding: 10px 0;
+}
+.footer-msg {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  font-size: 16px;
+  transform: translateX(-50%);
+  z-index: 1002;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.2rem);
+  padding: 10px;
+  font-weight: 400;
+  border-radius: 8px;
+  transition: 1s;
+}
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+
+  .footer-col form {
+    display: block;
+  }
+
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .subscribe-section {
+    width: 100%;
+  }
+  .dev {
+    padding: 0 20px;
+  }
+}

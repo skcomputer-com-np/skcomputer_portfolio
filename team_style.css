@@ -1,0 +1,87 @@
+#team-section {
+  background-color: var(--secondaryColor);
+  padding: var(--containerPadding_l);
+}
+.team-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  margin: 35px 0;
+}
+.team-content {
+  width: 20%;
+  min-width: 320px;
+  height: fit-content;
+  padding-bottom: 25px;
+  background-color: var(--textColor);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.team-image-1,
+.team-image-2,
+.team-image-3 {
+  width: 100%;
+  aspect-ratio: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.team-image-1 {
+  background-image: url(Image/Team/Sushil.jpg);
+}
+.team-image-2 {
+  background-image: url(Image/Team/Sanjay.png);
+  transform: translateY(-10px);
+}
+.team-image-3 {
+  background-image: url(Image/Team/sumit.jpg);
+  transform: rotateY(180deg);
+}
+
+.team-text-content .team-content-color {
+  color: var(--primaryColor);
+  margin-left: 20px;
+  line-height: 35px;
+}
+.experience {
+  margin-bottom: 10px;
+}
+.name {
+  margin-top: 10px;
+}
+.team-content:hover {
+  scale: 1.01;
+  border: none;
+  box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+.team-text-content span a {
+  text-decoration: none;
+  border: none;
+  color: var(--textColor);
+  background-color: var(--secondaryColor);
+  padding: 8px 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  &:hover {
+    background-color: var(--primaryColor);
+  }
+}
+
+.team-text-content:hover span a:hover {
+  color: var(--textColor);
+}
+
+@media (max-width: 600px) {
+  .team-content {
+    width: 100%;
+    min-width: unset;
+  }
+  #team-section {
+    padding: var(--containerPadding_s) 30px;
+  }
+}

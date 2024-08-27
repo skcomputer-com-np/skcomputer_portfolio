@@ -1,0 +1,152 @@
+.home {
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: var(--secondaryColor);
+}
+.home-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 25px;
+  padding: 25px;
+  overflow-x: hidden;
+  z-index: 10;
+}
+.home-heading {
+  width: 60%;
+}
+.title {
+  color: var(--textColor);
+  font-size: 3rem;
+  font-weight: 400;
+}
+.tagline {
+  font-weight: 200;
+  font-style: italic;
+}
+.new-line {
+  display: none;
+}
+.right-section {
+  height: 90%;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+.right-section img {
+  width: 100%;
+  height: 100%;
+}
+.wrapper .square {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  scale: 0;
+  z-index: 1;
+  animation: animate 2s infinite backwards 5s;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/022/598/994/original/yellow-5-point-star-outline-drawing-free-png.png);
+  background-size: cover;
+}
+.wrapper .square:nth-child(1) {
+  top: 70%;
+  left: 40%;
+  animation-delay: 1s;
+}
+.wrapper .square:nth-child(2) {
+  top: 40%;
+  animation-delay: 2s;
+  left: 30%;
+}
+.wrapper .square:nth-child(3) {
+  top: 90%;
+  left: 10%;
+  animation-delay: 2.5s;
+}
+.wrapper .square:nth-child(4) {
+  top: 10%;
+  left: 80%;
+  animation-delay: 1s;
+}
+.wrapper .square:nth-child(5) {
+  top: 80%;
+  left: 5%;
+  animation-delay: 3s;
+}
+.wrapper .square:nth-child(6) {
+  top: 40%;
+  left: 80%;
+  animation: animate 2s infinite linear 5s;
+  animation-delay: 2s;
+}
+.wrapper .square:nth-child(7) {
+  top: 50%;
+  left: 20%;
+  animation-delay: 2.5s;
+}
+.wrapper .square:nth-child(8) {
+  top: 16%;
+  left: 10%;
+  animation-delay: 3s;
+}
+.wrapper .square:nth-child(9) {
+  top: 25%;
+  left: 45%;
+  animation-delay: 1.5s;
+}
+@keyframes animate {
+  0% {
+    scale: 0;
+    opacity: 1;
+    border-radius: 0%;
+    transform: rotate(-90deg);
+  }
+  100% {
+    scale: 1;
+    transform: translateY(-50%) rotate(0deg);
+    border-radius: 50%;
+    opacity: 0;
+  }
+}
+.auto-change {
+  color: var(--primaryColor);
+  background-color: var(--textColor);
+  font-weight: 600;
+}
+@media only screen and (max-width: 1366px) {
+  .home-heading h1 {
+    font-size: 2.5rem;
+  }
+  .tagline {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .right-section {
+    display: none;
+  }
+  .home-heading {
+    width: 100%;
+  }
+  .wrapper {
+    background-image: url(Image/home-bg.png);
+    background-size: 300px 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+  }
+  .home-heading h1 {
+    font-size: 1.88rem;
+  }
+  .home-heading h2 {
+    font-size: 1.2rem;
+  }
+  .new-line {
+    display: block;
+  }
+}
